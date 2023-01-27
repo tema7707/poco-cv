@@ -9,7 +9,7 @@ This is a web server written in C++ using the POCO library and the ONNX runtime 
 - OpenCV
 
 ## Usage
-1. Build the Docker image by running `docker build -t poco_cv` . in the project directory.
+1. Build the Docker image by running `docker build -t poco_cv .` in the project directory.
 2. Run the container using `docker run -p 9090:9090 -it poco_cv`.
 3. You could test the server using the included **request.py** script.
 
