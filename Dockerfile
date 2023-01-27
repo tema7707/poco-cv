@@ -47,3 +47,11 @@ RUN wget https://github.com/microsoft/onnxruntime/releases/download/v1.13.1/onnx
 RUN tar -zxvf onnxruntime-linux-x64-1.13.1.tgz
 RUN rm onnxruntime-linux-x64-1.13.1.tgz
 WORKDIR "/"
+
+# 4) POCO CV
+RUN echo "************************ POCO CV ************************"
+RUN git clone https://github.com/tema7707/poco-cv.git
+WORKDIR poco-cv
+CMD "cmake ."
+CMD "make"
+CMD "./poco_cv"
